@@ -23,6 +23,11 @@ const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 
+const noSvgSprites = () => {
+    return src('./src/icon/*.svg')
+        .pipe(dest('./app/icon'))
+};
+
 const styles = () => {
     return src('./src/scss/**/*.scss')
         .pipe(sourcemaps.init())
@@ -158,6 +163,7 @@ watch('./src/images/**.jpg', imgTooApp);
 watch('./src/images/**.jpeg', imgTooApp);
 watch('./src/images/**.png', imgTooApp);
 watch('./src/svg/**.svg', svgSprites);
+watch('./src/icon/**.svg', noSvgSprites);
 watch('./src/resources/**', resources);
 watch('./src/font/**.ttf', fonts);
 watch('./src/js/**/*.js', scripts);
@@ -168,7 +174,7 @@ exports.styles = styles;
 exports.watchFiles = watchFiles;
 exports.fileinclude = fileinclude;
 
-exports.default = series(clean, parallel(htmlInclude, libCSS, libJS, fonts, scripts, resources, imgTooApp, svgSprites), styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, libCSS, libJS, fonts, scripts, resources, imgTooApp, noSvgSprites, svgSprites), styles, watchFiles);
 
 
 const stylesBuild = () => {

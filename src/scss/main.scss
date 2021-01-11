@@ -3,16 +3,21 @@
 @import "fonts.scss";
 
 
-.body {
+body {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 14px;
+    color: #101f30;
 }
 
 .container {
-    width: 1300px;
+    width: 1000px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.container--fluid {
+    width: 1300px;
 }
 
 .header {
@@ -21,12 +26,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     padding-top: 23px;
-    padding-bottom: 240px;
+
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
-.header__top{
+.header__top {
     align-items: center;
 }
 
@@ -41,6 +46,19 @@
 
 .menu__list-item--link {
     color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+
+
+    &:hover {
+        border-bottom: 2px solid #17AADF;
+    }
+
+    &:active {
+        color: #17AADF;
+        transition: all 0.5s;
+    }
 }
 
 .header__top-lang--link {
@@ -48,16 +66,20 @@
     border: 1px solid #17AADF;
     border-radius: 14px;
     padding: 5px 10px;
+
+    &:hover {
+        background-color: #fff;
+    }
 }
 
 .header__top-logo {
     display: block;
-    
+
 }
 
-.header__top-logo--images { 
+.header__top-logo--images {
     display: block;
-   margin: 131px auto 0; 
+    margin: 131px auto 0;
     height: 422.00054931640625px;
     width: 348.0055847167969px;
 }
@@ -74,14 +96,312 @@
 
 .achievements__item {
     max-width: 220px;
-    margin-top: 40px;
+}
 
-    &-number {
-        font-family: 'Montserrat';
-        font-weight: 800;
-        font-size: 96px;
-        color: gold;
+.achivments__item-number {
+    font-weight: 800;
+    font-size: 96px;
+    color: #17AADF;
+    margin: 40px 0 20px;
+}
+
+.achivments__item-text,
+.info__content-title {
+    font-weight: 500;
+    font-size: 24px;
+
+}
+
+.achivments__item-text--bold,
+.info__content--bold {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.world-svg {
+    width: 72px;
+    height: 72px;
+    fill: #17AADF;
+    margin: 70px 0 20px;
+}
+
+.info__content {
+    margin-top: 55px;
+}
+
+.info__content-svgLogo {
+    float: left;
+    margin: 0 30px 20px 0;
+}
+
+.info__content-text {
+    display: block;
+    line-height: 17, 07px;
+    margin-top: 60px;
+}
+
+.team {
+    margin-top: 60px;
+}
+
+.team__info-foto {
+    width: 635px;
+    height: 658px;
+    border-radius: 317.5px 0px 0px 317.5px;
+    float: right;
+}
+
+.team__icon {
+    fill: #17AADF;
+    width: 30px;
+    height: 30px;
+}
+
+.block-team {
+    margin-left: 470px;
+    max-width: 470px;
+}
+
+.block-team__title,
+.services__title,
+.clients__title,
+.blog__title {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.block-team__text--semibold,
+.services__text--semibold,
+.clients__text--semibold {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.services {
+    margin-top: 180px;
+}
+
+.services__list {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.serveces__list-item {
+    position: relative;
+    top: 0;
+    left: 60px;
+    width: 33%;
+}
+
+.item-services--union::before,
+.item-services--w_icon::before,
+.item-services--law_icon::before,
+.item-services--l_icon::before {
+    content: "";
+    background-image: url("../images/svg/stack/sprite.svg#Union");
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: -60px;
+}
+
+.item-services--w_icon::before {
+    background-image: url("../images/svg/stack/sprite.svg#w_icon");
+}
+
+.item-services--law_icon::before {
+    background-image: url("../images/svg/stack/sprite.svg#law_icon");
+}
+
+.item-services--l_icon::before {
+    background-image: url("../images/svg/stack/sprite.svg#l_icon");
+}
+
+.item-services__text {
+    width: 220px;
+
+    &--bold {
+        font-weight: 700;
+        font-size: 14px;
     }
+}
+
+
+.clients {
+    margin-top: 68px;
+}
+
+.clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100%;
+
+    &-item {
+        margin-top: 50px;
+        width: 16%;
+    }
+}
+
+.clients__list-item--svg {
+    width: 97px;
+    height: 52px;
+}
+
+.blog {
+    margin-top: 30px;
+}
+
+.news__preview {
+    width: 469px;
+    border-radius: 5px;
+    background-color: #f3f6f9;
+}
+
+.blog__news--link {
+    cursor: pointer;
+    color: #101f30;
+}
+
+.content {
+    padding: 20px 23px 35px 20px;
+
+}
+
+.contet__data {
+    color: #9aa0a6;
+}
+
+.content__title,
+.list-news__item--link {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+
+.list-news {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-news__item {
+    width: 42%;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 35px;
+    margin-left: 30px;
+
+    &::before {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: #E4E8EC;
+        position: absolute;
+        top: 115px;
+    }
+}
+
+.list-news__item--link {
+    color: #101f30;
+
+    &:hover {
+        border-bottom: 1px solid #101f30;
+    }
+
+}
+
+.footer {
+    margin-top: 65px;
+    background: #101F30;
+    padding: 30px 0;
+    color: #E4E8EC;
+
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__corp {
+    width: 35%;
+}
+.footer__corp-info,.footer__corp-reg, .footer__corp-social {
+    margin-left: 30px;
+}
+
+.footer__corp-info {
+    width: 220px;
+    font-size: 14px;
+    position: relative;
+    left: 100px;
+}
+
+.footer__corp-info::before {
+    content: " ";
+    width: 53px;
+    height: 30px;
+    position: absolute;
+    background: url('../icon/footer-svg.svg');
+    left: -100px;
+    
+}
+
+.footer__corp-contacts {
+    display: block;
+    flex-direction: column;
+    
+}
+
+.footer__corp-contacts--telephone,
+.footer__corp-contacts--mail {
+    color:#E4E8EC;
+    display: block;
+    
+    &:hover {
+        border-bottom: 1px solid #E4E8EC;
+    }
+}
+
+.footer__corp-contacts--mail span {
+    color: #17AADF; 
+}
+
+.footer__corp-social {
+    display: block;
+    justify-content: flex-end;
+
+}
+
+.social-list {
+    display: flex;
+
+    &__item {
+        margin-left: 5px;
+    }
+}
+
+.law {
+    margin-top: 36px;
+    
+    &__link {
+       color: #17AADF;
+       display: block;
+       
+       &:hover {
+           border-bottom: 1px solid #17AADF;
+           
+       }
+    }
+
 }
 
 
@@ -90,14 +410,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
 @import "media.scss";
-
